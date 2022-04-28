@@ -4,7 +4,6 @@ import os
 import subprocess
 from string import Template
 
-
 BALENA_DEVICE_UUID = os.getenv("BALENA_DEVICE_UUID")
 UBIDOTS_DEVICE_LABEL = os.getenv("UBIDOTS_DEVICE_LABEL", BALENA_DEVICE_UUID)
 UBIDOTS_TOKEN = os.getenv("UBIDOTS_TOKEN")
