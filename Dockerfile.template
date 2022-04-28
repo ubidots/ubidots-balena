@@ -1,0 +1,8 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine-python:3.10-run
+RUN install_packages mosquitto
+WORKDIR /ubidots
+VOLUME ./config
+RUN wget https://z.cdn.ubidots.com/ustatic/certs/roots.pem
+COPY src .
+RUN chmod +x main.py
+CMD ./main.py

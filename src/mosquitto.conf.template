@@ -1,0 +1,12 @@
+listener 1883
+allow_anonymous true
+log_dest stdout
+
+connection ubidots-balena
+address industrial.api.ubidots.com:8883
+bridge_cafile roots.pem
+
+remote_clientid ${client_id}
+remote_username ${username}
+
+topic # both 2 "" /v1.6/devices/${device_label}/
