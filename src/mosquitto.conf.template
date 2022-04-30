@@ -9,4 +9,9 @@ bridge_cafile roots.pem
 remote_clientid ${client_id}
 remote_username ${username}
 
-topic # both 2 "" /v1.6/devices/${device_label}/
+# Device topic (publish)
+topic "" out 2 / /v1.6/devices/${device_label}
+# Variables topics (publish/subscribe)
+topic + both 2 "" /v1.6/devices/${device_label}/
+# Variables last value topics (subscribe)
+topic +/lv in 2 "" /v1.6/devices/${device_label}/
