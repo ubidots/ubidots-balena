@@ -41,7 +41,7 @@ def main():
 
 
 def on_connect(client, userdata, flags, rc):
-    print(f"Connected with result code {rc}")
+    print(f"[INFO] Connected with result code {rc}")
 
     # Subscribe to variable last value
     client.subscribe("humidity/lv")
