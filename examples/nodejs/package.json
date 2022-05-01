@@ -1,0 +1,13 @@
+{
+  "name": "ubidots-balena-example",
+  "version": "0.0.1",
+  "description": "Simple project to illustrate how to use Ubidots Balena block in your Node.js app",
+  "main": "sample.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "mqtt": "^4.3.7"
+  }
+}

@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  
+  main:
+    build: .
+    depends_on:
+      - ubidots-balena
+    networks:
+      - ubidots-mqtt
+    restart: unless-stopped
+  
+  ubidots-balena:
+    image: bh.cr/g_alejandro_rosso/ubidots
+    networks:
+      - ubidots-mqtt
+    restart: always
+    volumes:
+      - ubidots-config:/ubidots/config
+
+networks:
+  ubidots-mqtt:
+
+volumes:
+  ubidots-config:

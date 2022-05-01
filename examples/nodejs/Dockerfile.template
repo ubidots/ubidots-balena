@@ -1,0 +1,6 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine-node:16-run
+WORKDIR /app
+COPY package*.json ./
+RUN JOBS=MAX npm install --production --unsafe-perm && npm cache verify && rm -rf /tmp/*
+COPY main.js ./
+CMD ["npm", "start"]
