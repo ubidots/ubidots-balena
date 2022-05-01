@@ -3,6 +3,6 @@ RUN install_packages mosquitto
 WORKDIR /ubidots
 VOLUME ./config
 RUN wget https://z.cdn.ubidots.com/ustatic/certs/roots.pem
-COPY src .
+COPY src ./
 RUN chmod +x main.py
 CMD ./main.py
