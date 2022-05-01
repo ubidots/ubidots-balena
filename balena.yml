@@ -1,6 +1,6 @@
 name: Ubidots Balena
 description: >-
-  Send data to Ubidots from your Balena IoT app through MQTT.
+  Send data to Ubidots from your Balena app.
 version: 0.0.1
 type: sw.block
 assets:
