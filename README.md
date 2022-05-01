@@ -12,6 +12,7 @@ Send data to Ubidots from your Balena app.
 4. [Receive data](#receive-data)
     1. [Receive variable last value](#receive-variable-last-value)
     2. [Receive variable last dot](#receive-variable-last-dot)
+5. [Examples](#examples)
 
 ## Add to your project
 
@@ -153,3 +154,7 @@ mqtt.subscribe("temperature")
 // temperature: {"value": 27, "timestamp": 1634311791000, "context": {}, "created_at": 1634311791000}
 
 ```
+
+## Examples
+
+You can find some sample projects in [examples](examples) folder that can give you a better idea of how to use this block in your app.
