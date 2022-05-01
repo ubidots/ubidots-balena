@@ -1,5 +1,5 @@
 import json
-from random import random, uniform
+from random import uniform
 from time import sleep, time
 
 import paho.mqtt.client as mqtt
