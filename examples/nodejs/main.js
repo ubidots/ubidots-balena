@@ -3,16 +3,18 @@ const client = mqtt.connect("mqtt://ubidots-balena:1883", "main");
 
 client.on("connect", function (connack) {
   console.log(`[INFO] Connected with result code ${connack.returnCode}`);
-  
+
   // Subscribe to variable last value
   client.subscribe("humidity/lv");
-  
+
   // Subscribe to variable last dot
   client.subscribe("temperature");
 });
 
 client.on("message", function (topic, message, packet) {
-	console.log(`[INFO] Receive data from variable\n${topic}: ${message.toString()}`);
+  console.log(
+    `[INFO] Receive data from variable\n${topic}: ${message.toString()}`
+  );
 });
 
 function main() {
