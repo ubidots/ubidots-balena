@@ -1,5 +1,5 @@
 const mqtt = require("mqtt");
-const client = mqtt.connect("mqtt://ubidots-balena:1883", "main");
+const client = mqtt.connect("mqtt://ubidots-balena:1883", {clientId: "main"});
 
 client.on("connect", function (connack) {
   console.log(`[INFO] Connected with result code ${connack.returnCode}`);
