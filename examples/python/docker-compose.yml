@@ -11,7 +11,7 @@ services:
     restart: unless-stopped
   
   ubidots-balena:
-    image: bh.cr/g_alejandro_rosso/ubidots
+    image: bh.cr/sales6/ubidots
     networks:
       - ubidots-mqtt
     restart: always

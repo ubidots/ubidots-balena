@@ -24,7 +24,7 @@ version: '2'
 services:
   
   ubidots-balena:
-    image: bh.cr/g_alejandro_rosso/ubidots
+    image: bh.cr/sales6/ubidots
     networks:
       - ubidots-mqtt
     restart: always
@@ -41,7 +41,7 @@ volumes:
 You can use a specific version of the `ubidots-balena` block by changing its `image` entry as follows:
 
 ```yml
-    image: bh.cr/g_alejandro_rosso/ubidots/x.y.z
+    image: bh.cr/sales6/ubidots/x.y.z
 ```
 
 Then, add `ubidots-mqtt` network to your application container and make it depends on the `ubidots-balena` block container. e.g.:
@@ -60,7 +60,7 @@ services:
     restart: unless-stopped
   
   ubidots-balena:
-    image: bh.cr/g_alejandro_rosso/ubidots
+    image: bh.cr/sales6/ubidots
     networks:
       - ubidots-mqtt
     restart: always
