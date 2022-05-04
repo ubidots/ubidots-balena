@@ -18,4 +18,5 @@ data:
     - raspberry-pi
     - raspberry-pi2
     - raspberrypi3
+    - raspberrypi3-64
     - raspberrypi4-64
